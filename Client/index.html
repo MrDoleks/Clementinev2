@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Front end static browser app  -->
+<head>
+  <title>Celmentine</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="client.js"></script>
+</head>
+
+<body>
+
+  <div class="Layout">
+    <div class="Header">
+      <i>CLEMENTINE</i>
+    </div>
+
+    <div class="Content">
+      <div class="ContentLeft">
+        <div class="Head">
+          <div class="StackedDiv">
+            <div class="stage">
+              <figure class="circle"></figure>
+            </div>
+          </div>
+          <div class="StackedDiv Eyes">
+            <div class="stage">
+              <figure class="ball1">
+                <span class="shadow"></span>
+                <span class="iris1"></span>
+            </div>
+            <div class="stage">
+              <figure class="ball2">
+                <span class="shadow"></span>
+                <span class="iris2"></span>
+            </div>
+          </div>
+        </div>
+        <div class="Input">
+          <div>
+            <label for="in">Enter Input Here:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" id="searchMode" name="searchMode" />
+            Search Mode
+          </div>
+            <textarea class="InputBox" id="in">Hello Clementine!</textarea>
+            <div class="buttons">
+              <button id="submit" onclick="handleSubmit()">Enter</button>
+              <button id="clear" onclick="clearText()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ContentRight">
+
+        <div id="out" class="Output">
+          . . .
+        </div>
+      </div>
+    </div>
+
+    <div class="Foot">
+      <div class="Subtitle">The Online AI Virtual Assistant</div>
+      <div class="Credit">Created by David Oleksy 4/__/2022</div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+  </div>
+</body>
+
+</html>

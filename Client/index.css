@@ -1,0 +1,273 @@
+/* HTML Styles */
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color:rgb(4, 25, 109);
+}
+
+hr {
+  margin: 0;
+  align-self: stretch;
+  margin-top: 5px;
+}
+
+/* Custom Classes */
+.Layout {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons{
+  display: flex;
+}
+
+.buttons button {
+  flex-grow: 1;
+}
+
+.Content {
+  display: flex;
+  justify-content: center;
+}
+
+.Header {
+  width: 50%;
+  text-align: center;
+  background-color:rgb(4, 25, 109);
+  font-size: 4em;
+  color: rgb(255, 0, 76);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ContentLeft {
+  width: 900px;
+  height: 550px;
+  background-color:rgb(4, 25, 109);
+  background-image: linear-gradient(to left, rgb(6, 53, 182) , rgb(4, 25, 109));
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  ". head ."
+  ". . ."
+  ". input .";
+}
+
+.ContentRight {
+  width: 900px;
+  height: 550px;
+  background-color:rgb(4, 25, 109); /*for browsers that don't support gradient */
+  background-image: linear-gradient(to right, rgb(6, 53, 182) , rgb(4, 25, 109));
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-right: 10px;
+}
+
+.Foot {
+  width: 100%;
+  text-align: center;
+  background-color:rgb(4, 25, 109);
+}
+
+.Subtitle {
+  font-size: 2em;
+  color: rgb(98, 0, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Credit {
+  text-align: center;
+  color: rgb(1, 3, 34);
+  font-family:'Courier New', Courier, monospace;
+}
+
+/* For eyes in our layout */
+.Head {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  grid-area: head;
+  justify-self: left;
+  display: flex;
+  justify-content: space-around;
+  transform: scale(.5);
+}
+
+.StackedDiv {
+  position: absolute;
+  top: 0;
+}
+
+.Eyes {
+  margin-top: 15%;
+  transform: scale(0.75);
+}
+
+.Input {
+  grid-area: input;
+  justify-self: center;
+  color: rgb(7, 156, 255);
+  display: flex;
+  flex-direction: column;
+}
+
+.InputBox {
+  height: 50px;
+  width: 400px;
+  font-size: 12pt;
+}
+
+.Output {
+  margin-top: 15px;
+  color: rgb(255, 7, 81);
+  overflow: scroll;
+}
+
+/* Eyeball animation stuff */
+.circle {
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: 440px;
+    width: 400px;
+    background: radial-gradient(circle at 100px 100px, rgb(255, 0, 55), #000);
+  }
+
+  @keyframes move-eye-skew {
+  0% {
+    transform: none;
+  }
+  20% {
+    transform: translateX(-15px) translateY(15px) skewX(15deg) skewY(-10deg) scale(0.95);
+  }
+  25%, 44% {
+    transform: none;
+  }
+  50%, 60% {
+    transform: translateX(10px) translateY(-20px) skewX(5deg) skewY(2deg) scaleX(0.95);
+  }
+  66%, 100% {
+    transform: none;
+  }
+}
+
+.ball1 {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
+}
+
+.ball1:after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+}
+
+.iris1 {
+  width: 55%;
+  height: 55%;
+  margin: 24%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #b42c03 0%, #ff8352 30%, #b15226 100%);
+  transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+  position: absolute;
+  animation: move-eye-skew 5s ease-out infinite;
+}
+
+.iris1:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 37.5%;
+  height: 37.5%;
+  border-radius: 50%;
+  top: 31.25%;
+  left: 31.25%;
+  background: black;
+}
+
+.iris1:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 31.25%;
+  height: 31.25%;
+  border-radius: 50%;
+  top: 18.75%;
+  left: 18.75%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ball2 {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
+}
+
+.ball2:after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+}
+
+.iris2 {
+  width: 55%;
+  height: 55%;
+  margin: 24%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #204fb4 0%, #6fbeff 30%, #436db2 100%);
+  transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+  position: absolute;
+  animation: move-eye-skew 5s ease-out infinite;
+}
+
+.iris2:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 37.5%;
+  height: 37.5%;
+  border-radius: 50%;
+  top: 31.25%;
+  left: 31.25%;
+  background: black;
+}
+
+.iris2:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 31.25%;
+  height: 31.25%;
+  border-radius: 50%;
+  top: 18.75%;
+  left: 18.75%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.stage {
+  display: inline-block;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transform: rotateY(0.01deg);
+}
